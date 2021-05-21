@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Apps
+
+    'django_admin_listfilter_dropdown',
+    'Config',
+
 ]
 
 MIDDLEWARE = [
@@ -75,12 +81,8 @@ WSGI_APPLICATION = 'archive.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'media_archive',
-        'USER':'postgres',
-        'PASSWORD':'3141',
-        'HOST':'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -126,7 +128,7 @@ STATIC_ROOT = BASE_DIR/'static_root'
 STATICFILES_DIRS = [BASE_DIR/'static']
 
 # Media Files Config
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media_root/'
 MEDIA_ROOT = BASE_DIR/'media_root'
 
 # Default primary key field type

@@ -12,3 +12,8 @@ if settings.DEBUG:
                           document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
+
+
+admin.site.index_title="Media Archive"
+admin.site.site_header="Media Archive Admin"
+admin.site.site_title="Media Archive"
